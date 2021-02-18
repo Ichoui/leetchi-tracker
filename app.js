@@ -69,6 +69,9 @@ function callback(error, response, body) {
             }
             tabBiz.push(fullname + amount)
         })
+        console.log('---------------');
+        const date = new Date();
+        console.log(date.getHours() + 'h' + date.getMinutes());
         console.table(tabBiz);
         console.warn('Somme des dons non cachés : ' + tabTotalAmount + '€')
         console.log('Total participants : ' + data.data.paging.Total + ' ==> https://www.leetchi.com/c/depart-victoria-lwnqxqwr');
@@ -77,7 +80,7 @@ function callback(error, response, body) {
 
 setInterval(() => {
     request(options, callback);
-}, 20000)
+}, 1000)
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
