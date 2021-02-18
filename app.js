@@ -80,7 +80,7 @@ function callback(error, response, body) {
 
 setInterval(() => {
     request(options, callback);
-}, 1000)
+}, 20000)
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
